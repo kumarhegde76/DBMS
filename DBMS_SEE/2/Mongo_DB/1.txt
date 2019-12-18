@@ -1,0 +1,4 @@
+Update the parts identifier 
+
+
+db.WAREHOUSE.update({"PNO":1950},{$set:{"PNO":2017}},{multi:true})

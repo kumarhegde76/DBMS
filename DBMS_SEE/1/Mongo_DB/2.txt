@@ -1,0 +1,3 @@
+b.Name the employees working on Project Number :104
+
+db.EMPLOYEE.find({"ProjectNo":104}).pretty()

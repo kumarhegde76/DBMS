@@ -1,0 +1,6 @@
+find number of parts supplied by each warehouse
+
+
+select count(pno),wno
+from shipment
+group by wno;

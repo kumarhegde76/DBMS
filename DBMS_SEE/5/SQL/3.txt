@@ -1,0 +1,6 @@
+find number of books borrowed by each student
+
+select count(isbn),usn
+from borrow
+group by usn;
+

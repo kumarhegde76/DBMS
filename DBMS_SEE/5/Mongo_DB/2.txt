@@ -1,0 +1,4 @@
+b.Obtain the Names of students who have borrowed database books.
+ 
+db.LIBRARY.find({"TITLE":'datbase'},{"SSN":1,_id:0}).pretty()
+

@@ -1,0 +1,4 @@
+list employees of department xyz
+
+
+db.EMPLOYEE.find({"DeptNo":'XYZ'}).pretty()

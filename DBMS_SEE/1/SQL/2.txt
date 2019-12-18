@@ -1,0 +1,7 @@
+//find number of employees working in each department
+
+
+
+select deptno, count(*)
+from Employee
+group by deptno;

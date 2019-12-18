@@ -1,0 +1,3 @@
+b.Retrieve boats of color :”white”
+
+db.BOATRES.find({"COLOUR":'White'}).pretty()

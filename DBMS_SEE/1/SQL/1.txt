@@ -1,0 +1,7 @@
+obtain ssn of employees assigned to database projects
+
+select usn 
+from assigned_to
+where projectno=(select projectno
+		from Project
+		where projectarea='database');

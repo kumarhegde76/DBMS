@@ -1,0 +1,8 @@
+obtain bid of boat reserved by Ram
+
+
+select bid
+from reserve 
+where sid in(select sid 
+	     from sailor 
+	     where sname='ram');

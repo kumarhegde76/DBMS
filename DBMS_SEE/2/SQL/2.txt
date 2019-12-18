@@ -1,0 +1,11 @@
+obtain the names of the supplier who supply bolts
+
+
+select sname 
+from supplier 
+where sno in(select sno 
+	     from supply 
+	     where pno in(select pno 
+	     		  from part
+	     		  where pname='bolts')
+	     );

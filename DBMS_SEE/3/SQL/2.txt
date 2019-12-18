@@ -1,0 +1,5 @@
+retrive bid of boat reserved by all the sailor
+
+select bid,sname
+from reserve,sailor
+where sailor.sid=reserve.sid;

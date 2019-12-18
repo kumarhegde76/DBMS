@@ -1,0 +1,11 @@
+obtain the name of the warehouse which have shipped red color parts
+
+
+select wname 
+from warehouse 
+where wno in(select wno 
+	    from shipment 
+	    where pno =(select pno 
+	    from part
+	    where color='red')
+	    );

@@ -1,0 +1,5 @@
+select pno 
+from supply
+where sno =(select sno 
+	    from supplier 
+	    where sname ='Ram');

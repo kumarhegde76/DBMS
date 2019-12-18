@@ -1,0 +1,11 @@
+obtain the name of the student who have borrowed batabase book
+
+
+select name
+from student 
+where usn in(select usn from 
+	     from borrow 
+	     where isbn =(select isbn 
+	     		  from book 
+	     		  where title='database')
+	    );

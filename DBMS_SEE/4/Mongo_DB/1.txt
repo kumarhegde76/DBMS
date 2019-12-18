@@ -1,0 +1,3 @@
+a.Find the parts shipped from warehouse :"ABC"
+
+db.SHIPMENT.find({"WNAME":'ABC'}).pretty()

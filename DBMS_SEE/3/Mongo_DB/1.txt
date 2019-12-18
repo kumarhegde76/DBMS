@@ -1,0 +1,4 @@
+a.Obtain the number of boats obtained by sailor :Sucre
+
+
+db.BOATRES.find({"SNAME":'Sucre'}).count()

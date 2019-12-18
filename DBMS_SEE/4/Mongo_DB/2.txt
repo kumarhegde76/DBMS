@@ -1,0 +1,3 @@
+b.List the total quantity supplied from each warehouse 
+
+db.SHIPMENT.aggregate([{ $group:{_id:"$WNAME",total:{$sum:"$QUANTITY"}}}])

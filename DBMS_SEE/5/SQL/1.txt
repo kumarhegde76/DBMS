@@ -1,0 +1,8 @@
+obtain the name of the student who has borrowed the book bearing isbn 123
+
+
+select name 
+from student 
+where usn in(select usn 
+	     from borrow 
+	     where isbn='123');

@@ -1,0 +1,5 @@
+b.Display all suppliers who supply the part with part identifier: 2015
+
+
+db.WAREHOUSE.find({"PNO":2015}).pretty()
+

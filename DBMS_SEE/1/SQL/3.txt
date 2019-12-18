@@ -1,0 +1,4 @@
+update projectno of employeebearing ssn=1 to projectno=20
+
+update assigned_to set projectno=20
+where usn=1;

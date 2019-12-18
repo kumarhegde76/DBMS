@@ -1,0 +1,5 @@
+obtain pno of part shipped by all warehouses
+
+select pno,wname
+from shipment,warehouse
+where shipment.wno=warehouse.wno;

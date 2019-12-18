@@ -1,0 +1,5 @@
+find no of boats reserved by each sailor
+
+select count(bid),sid
+from reserve
+group by sid;
