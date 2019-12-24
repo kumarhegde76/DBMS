@@ -1,4 +1,4 @@
-a.Obtain the name of the student who has borrowed the book bearing ISBN "123‟ 
+Obtain the name of the student who has borrowed the book bearing ISBN "123‟ 
 
 db.LIBRARY.find({"ISBN":123},{"SSN":1,_id:0}).pretty()
 
