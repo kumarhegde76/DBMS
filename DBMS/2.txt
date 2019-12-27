@@ -1,0 +1,68 @@
+create table part (
+    pno number primary key,
+    pname varchar(15),
+    color varchar(15)
+);
+
+create table supplier(
+	sno number primary key,
+    sname varchar(15),
+    address varchar(15)
+);
+
+create table supply(
+	pno number references part(pno) on delete cascade,
+    sno number references supplier(sno) on delete cascade,
+    quantity number,
+    primary key(pno, sno)
+);
+
+insert into part values(
+    &pno, '&pname', '&color'
+);
+
+insert into supplier values(
+    &sno, '&sname', '&address'
+);
+
+insert into supply values(
+    &pno, &sno, &quantity
+);
+
+
+//1) Obtain the pno of the parts supplied by supplier Ram
+
+select pno 
+from supply 
+where sno = (
+	select sno 
+    from supplier
+    where sname = 'Ram'
+);
+
+output:
+pno
+4
+
+//2) Obtain the names of the suppliers who supply bolts
+
+select sname
+from supplier
+where sno in (
+	select sno
+    from supply
+    where pno = (
+    	select pno
+        from part
+        where pname = 'bolts'
+));
+
+output:
+sname
+Soham
+
+//3) delete the parts which are green in color
+
+delete
+from part
+where color = 'green';
